@@ -15,13 +15,14 @@ const icon = L.icon({
 });
 
 interface MapComponentProps {
-  jobs: any[];
+  jobs: { id: string | number; title: string; aiQuote: string }[];
 }
 
 export default function MapComponent({ jobs }: MapComponentProps) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
   }, []);
 

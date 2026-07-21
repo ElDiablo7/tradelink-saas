@@ -2,7 +2,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Topbar from "@/components/Topbar";
 
 export default function PricingPage() {
   const [view, setView] = useState<'homeowner' | 'trade' | 'agency'>('homeowner');
@@ -78,7 +77,7 @@ export default function PricingPage() {
         
         <div className="text-center max-w-3xl mb-12 animate-in fade-in slide-in-from-bottom-4">
           <h1 className="text-4xl md:text-6xl font-black text-white mb-6">Transparent pricing.<br/>No hidden surprises.</h1>
-          <p className="text-xl text-slate-400">Whether you need a pipe fixed, you're looking for work, or you manage 1,000 properties, our pricing is simple and fair.</p>
+          <p className="text-xl text-slate-400">Whether you need a pipe fixed, you&apos;re looking for work, or you manage 1,000 properties, our pricing is simple and fair.</p>
         </div>
 
         {/* 3-Way View Toggle */}
@@ -155,7 +154,7 @@ export default function PricingPage() {
                 </div>
                 <div>
                   <h4 className="font-bold text-teal-400 mb-2">Who do I pay?</h4>
-                  <p className="text-slate-400 text-sm leading-relaxed">You settle the invoice directly with the tradesperson upon completion of the job. TradeLink does not hold your money or take a cut of the tradesperson's hard work.</p>
+                  <p className="text-slate-400 text-sm leading-relaxed">You settle the invoice directly with the tradesperson upon completion of the job. TradeLink does not hold your money or take a cut of the tradesperson&apos;s hard work.</p>
                 </div>
                 <div>
                   <h4 className="font-bold text-teal-400 mb-2">What about parts and materials?</h4>
@@ -213,7 +212,7 @@ export default function PricingPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
                   <h4 className="font-bold text-amber-400 mb-2">Do I pay to just see jobs?</h4>
-                  <p className="text-slate-400 text-sm leading-relaxed">No. Viewing the Live Radar and seeing job descriptions/photos is completely free. You only spend a credit (or use your Pro subscription) when you hit "Accept Job".</p>
+                  <p className="text-slate-400 text-sm leading-relaxed">No. Viewing the Live Radar and seeing job descriptions/photos is completely free. You only spend a credit (or use your Pro subscription) when you hit &quot;Accept Job&quot;.</p>
                 </div>
                 <div>
                   <h4 className="font-bold text-amber-400 mb-2">Do you take a cut of my earnings?</h4>

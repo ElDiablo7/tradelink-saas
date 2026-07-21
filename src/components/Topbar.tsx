@@ -38,7 +38,7 @@ export default function Topbar() {
                   </button>
                   <div className="border-t border-slate-700 my-2"></div>
                   <button onClick={() => setSearchOpen(false)} className="w-full text-center px-3 py-2 text-teal-400 hover:bg-slate-700 rounded-lg text-sm font-medium">
-                    See all results for "{searchQuery}"
+                    See all results for &quot;{searchQuery}&quot;
                   </button>
                 </div>
               </div>

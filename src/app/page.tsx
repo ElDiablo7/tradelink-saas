@@ -133,7 +133,7 @@ export default function ConsumerLandingPage() {
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-teal-500/0 via-teal-500 to-teal-500/0 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <div className="w-16 h-16 rounded-2xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-3xl mb-6 text-teal-400 font-black shrink-0">1</div>
                 <h3 className="text-2xl font-bold text-white mb-3">Snap & Describe</h3>
-                <p className="text-slate-400 leading-relaxed flex-1">Tell our AI what's broken or snap a quick photo. We instantly diagnose the issue and calculate a standardized fair quote.</p>
+                <p className="text-slate-400 leading-relaxed flex-1">Tell our AI what&apos;s broken or snap a quick photo. We instantly diagnose the issue and calculate a standardized fair quote.</p>
                 <div className="mt-8 rounded-2xl overflow-hidden border border-slate-700 relative h-48">
                   <Image src="/images/tradelink/02-step-snap-and-describe.webp" alt="Snap and describe" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
@@ -168,7 +168,7 @@ export default function ConsumerLandingPage() {
             <div>
               <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Built on Trust.</h2>
               <p className="text-slate-400 text-lg mb-8 leading-relaxed">
-                Inviting a stranger into your home requires absolute trust. That's why every professional on TradeLink goes through a rigorous vetting process.
+                Inviting a stranger into your home requires absolute trust. That&apos;s why every professional on TradeLink goes through a rigorous vetting process.
               </p>
               <ul className="space-y-4">
                 {['ID & Background Checks Verified', 'Public Liability Insurance Confirmed', 'Trade Qualifications Authenticated', 'Continuous Community Reviews'].map((item, i) => (
