@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import AIAssistant from "@/components/AIAssistant";
 
 export default function ConsumerLandingPage() {
@@ -37,28 +38,39 @@ export default function ConsumerLandingPage() {
 
       <main className="flex-1 flex flex-col items-center">
         
-        {/* Hero Section */}
-        <section className="w-full max-w-6xl mx-auto px-6 py-24 md:py-32 text-center relative z-10">
-          <div className="inline-block bg-teal-500/10 border border-teal-500/30 px-4 py-1.5 rounded-full text-teal-400 font-bold text-sm mb-8 animate-in fade-in slide-in-from-bottom-4">
-            ✨ AI-Powered Trade Matching
+        <section className="w-full max-w-7xl mx-auto px-6 py-24 md:py-32 relative z-10 flex flex-col md:flex-row items-center gap-12">
+          <div className="flex-1 text-center md:text-left">
+            <div className="inline-block bg-teal-500/10 border border-teal-500/30 px-4 py-1.5 rounded-full text-teal-400 font-bold text-sm mb-8 animate-in fade-in slide-in-from-bottom-4">
+              ✨ AI-Powered Trade Matching
+            </div>
+            
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[1.1] tracking-tight mb-8 animate-in fade-in slide-in-from-bottom-6">
+              Stop waiting.<br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-emerald-300">Start fixing.</span>
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-slate-400 max-w-2xl mx-auto md:mx-0 leading-relaxed mb-12 animate-in fade-in slide-in-from-bottom-8">
+              Describe your home emergency, get an instant fair quote, and watch a vetted local professional arrive on a live map.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start animate-in fade-in slide-in-from-bottom-10">
+              <Link href="/post-job" className="bg-teal-500 text-slate-900 text-lg font-black px-10 py-4 rounded-full hover:bg-teal-400 transition-all hover:scale-105 shadow-[0_0_30px_rgba(20,184,166,0.4)] text-center">
+                Find a Trade Instantly
+              </Link>
+              <Link href="#how-it-works" className="bg-slate-800 text-white border border-slate-700 text-lg font-bold px-10 py-4 rounded-full hover:bg-slate-700 transition-colors text-center">
+                See How It Works
+              </Link>
+            </div>
           </div>
-          
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[1.1] tracking-tight mb-8 animate-in fade-in slide-in-from-bottom-6">
-            Stop waiting.<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-emerald-300">Start fixing.</span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-slate-400 max-w-2xl mx-auto leading-relaxed mb-12 animate-in fade-in slide-in-from-bottom-8">
-            Describe your home emergency, get an instant fair quote, and watch a vetted local professional arrive on a live map.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-in fade-in slide-in-from-bottom-10">
-            <Link href="/post-job" className="bg-teal-500 text-slate-900 text-lg font-black px-10 py-4 rounded-full hover:bg-teal-400 transition-all hover:scale-105 shadow-[0_0_30px_rgba(20,184,166,0.4)]">
-              Find a Trade Instantly
-            </Link>
-            <Link href="#how-it-works" className="bg-slate-800 text-white border border-slate-700 text-lg font-bold px-10 py-4 rounded-full hover:bg-slate-700 transition-colors">
-              See How It Works
-            </Link>
+          <div className="flex-1 w-full animate-in fade-in slide-in-from-bottom-12">
+            <Image
+              src="/images/tradelink/01-homepage-hero-ai-dispatch.webp"
+              alt="TradeLink AI dispatch connecting a homeowner emergency with verified local tradespeople"
+              width={1600}
+              height={1000}
+              priority
+              className="w-full rounded-[2rem] border border-slate-700 object-cover shadow-[0_0_50px_rgba(20,184,166,0.15)]"
+            />
           </div>
         </section>
 
@@ -71,25 +83,34 @@ export default function ConsumerLandingPage() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-slate-800/50 border border-slate-700 p-8 rounded-3xl relative overflow-hidden group">
+              <div className="bg-slate-800/50 border border-slate-700 p-8 rounded-3xl relative overflow-hidden group flex flex-col h-full">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-teal-500/0 via-teal-500 to-teal-500/0 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <div className="w-16 h-16 rounded-2xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-3xl mb-6 text-teal-400 font-black">1</div>
+                <div className="w-16 h-16 rounded-2xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-3xl mb-6 text-teal-400 font-black shrink-0">1</div>
                 <h3 className="text-2xl font-bold text-white mb-3">Snap & Describe</h3>
-                <p className="text-slate-400 leading-relaxed">Tell our AI what's broken or snap a quick photo. We instantly diagnose the issue and calculate a standardized fair quote.</p>
+                <p className="text-slate-400 leading-relaxed flex-1">Tell our AI what's broken or snap a quick photo. We instantly diagnose the issue and calculate a standardized fair quote.</p>
+                <div className="mt-8 rounded-2xl overflow-hidden border border-slate-700 relative h-48">
+                  <Image src="/images/tradelink/02-step-snap-and-describe.webp" alt="Snap and describe" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
               </div>
 
-              <div className="bg-slate-800/50 border border-slate-700 p-8 rounded-3xl relative overflow-hidden group">
+              <div className="bg-slate-800/50 border border-slate-700 p-8 rounded-3xl relative overflow-hidden group flex flex-col h-full">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-500/0 via-amber-500 to-amber-500/0 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <div className="w-16 h-16 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-3xl mb-6 text-amber-400 font-black">2</div>
+                <div className="w-16 h-16 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-3xl mb-6 text-amber-400 font-black shrink-0">2</div>
                 <h3 className="text-2xl font-bold text-white mb-3">Instant Match</h3>
-                <p className="text-slate-400 leading-relaxed">We ping the 5 closest, available, and highly-rated professionals in your area. The first to accept gets the job.</p>
+                <p className="text-slate-400 leading-relaxed flex-1">We ping the 5 closest, available, and highly-rated professionals in your area. The first to accept gets the job.</p>
+                <div className="mt-8 rounded-2xl overflow-hidden border border-slate-700 relative h-48">
+                  <Image src="/images/tradelink/03-step-instant-match.webp" alt="Instant Match" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
               </div>
 
-              <div className="bg-slate-800/50 border border-slate-700 p-8 rounded-3xl relative overflow-hidden group">
+              <div className="bg-slate-800/50 border border-slate-700 p-8 rounded-3xl relative overflow-hidden group flex flex-col h-full">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500/0 via-blue-500 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <div className="w-16 h-16 rounded-2xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-3xl mb-6 text-blue-400 font-black">3</div>
+                <div className="w-16 h-16 rounded-2xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-3xl mb-6 text-blue-400 font-black shrink-0">3</div>
                 <h3 className="text-2xl font-bold text-white mb-3">Live Tracking</h3>
-                <p className="text-slate-400 leading-relaxed">Watch your tradesperson arrive on the live map. Pay securely through the app only when the job is done.</p>
+                <p className="text-slate-400 leading-relaxed flex-1">Watch your tradesperson arrive on the live map. Pay securely through the app only when the job is done.</p>
+                <div className="mt-8 rounded-2xl overflow-hidden border border-slate-700 relative h-48">
+                  <Image src="/images/tradelink/04-step-live-tracking.webp" alt="Live tracking" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
               </div>
             </div>
           </div>
@@ -114,21 +135,14 @@ export default function ConsumerLandingPage() {
             </div>
             
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-tr from-teal-500/20 to-amber-500/20 rounded-3xl blur-3xl"></div>
-              <div className="bg-slate-800 border border-slate-700 rounded-3xl p-8 relative">
-                <div className="flex items-center gap-4 mb-6 pb-6 border-b border-slate-700">
-                  <div className="text-5xl">⭐️⭐️⭐️⭐️⭐️</div>
-                  <div className="text-white font-bold">4.9/5 Average Rating</div>
-                </div>
-                <p className="text-slate-300 italic mb-6">"My pipe burst at 2am. Used TradeLink, got a price instantly, and Dave was at my door 15 minutes later. Absolute lifesaver."</p>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-slate-600"></div>
-                  <div>
-                    <div className="font-bold text-white">Sarah Jenkins</div>
-                    <div className="text-sm text-slate-500">Croydon, London</div>
-                  </div>
-                </div>
-              </div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-teal-500/20 to-amber-500/20 rounded-[2.5rem] blur-3xl"></div>
+              <Image 
+                src="/images/tradelink/05-trust-vetting-shield.webp" 
+                alt="TradeLink Trust and Vetting"
+                width={800}
+                height={800}
+                className="relative rounded-[2.5rem] border border-slate-700 shadow-2xl object-cover w-full h-auto"
+              />
             </div>
           </div>
         </section>

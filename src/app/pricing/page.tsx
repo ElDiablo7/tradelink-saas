@@ -1,6 +1,6 @@
-"use client";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import Topbar from "@/components/Topbar";
 
 export default function PricingPage() {
@@ -81,18 +81,21 @@ export default function PricingPage() {
                 </Link>
               </div>
 
-              <div className="glass-panel p-8 rounded-3xl relative overflow-hidden border-amber-500/30 shadow-[0_0_40px_rgba(245,158,11,0.1)]">
+              <div className="glass-panel p-8 rounded-3xl relative overflow-hidden border-amber-500/30 shadow-[0_0_40px_rgba(245,158,11,0.1)] flex flex-col">
                 <div className="absolute top-0 right-0 bg-amber-500 text-slate-900 text-xs font-black px-3 py-1 rounded-bl-xl uppercase tracking-widest">Emergency</div>
                 <h3 className="text-2xl font-bold text-white mb-2">Priority Ping</h3>
                 <p className="text-slate-400 mb-6 min-h-[48px]">Skip the queue. For severe emergencies like burst pipes.</p>
                 <div className="text-5xl font-black text-white mb-6">£5.99 <span className="text-lg text-slate-500 font-normal">one-off</span></div>
                 
-                <ul className="space-y-4 mb-8">
+                <ul className="space-y-4 mb-8 flex-1">
                   <li className="flex items-start gap-3"><span className="text-amber-400">✓</span> Bypasses the standard queue</li>
                   <li className="flex items-start gap-3"><span className="text-amber-400">✓</span> Sends a loud push notification to ALL pros in 15 miles</li>
                   <li className="flex items-start gap-3"><span className="text-amber-400">✓</span> 98% match rate within 60 seconds</li>
                   <li className="flex items-start gap-3"><span className="text-amber-400">✓</span> Guaranteed priority arrival tracking</li>
                 </ul>
+                <div className="w-full h-32 relative mb-6 rounded-xl overflow-hidden border border-slate-700">
+                  <Image src="/images/tradelink/08-emergency-priority-ping.webp" alt="Priority Ping" fill className="object-cover" />
+                </div>
                 <Link href="/post-job" className="block w-full text-center bg-amber-500 hover:bg-amber-400 text-slate-900 font-bold py-4 rounded-xl transition-colors shadow-[0_0_20px_rgba(245,158,11,0.3)]">
                   Trigger Priority Ping
                 </Link>
@@ -140,18 +143,21 @@ export default function PricingPage() {
                 </Link>
               </div>
 
-              <div className="glass-panel p-8 rounded-3xl relative overflow-hidden border-teal-500/30 shadow-[0_0_40px_rgba(20,184,166,0.1)]">
+              <div className="glass-panel p-8 rounded-3xl relative overflow-hidden border-teal-500/30 shadow-[0_0_40px_rgba(20,184,166,0.1)] flex flex-col">
                 <div className="absolute top-0 right-0 bg-teal-500 text-slate-900 text-xs font-black px-3 py-1 rounded-bl-xl uppercase tracking-widest">Full Time</div>
                 <h3 className="text-2xl font-bold text-white mb-2">TradeLink Pro</h3>
                 <p className="text-slate-400 mb-6 min-h-[48px]">For professional businesses wanting a steady stream of local leads.</p>
                 <div className="text-5xl font-black text-white mb-6">£29.99 <span className="text-lg text-slate-500 font-normal">/ month</span></div>
                 
-                <ul className="space-y-4 mb-8">
+                <ul className="space-y-4 mb-8 flex-1">
                   <li className="flex items-start gap-3"><span className="text-teal-400">✓</span> <strong>Unlimited Job Accepts</strong></li>
                   <li className="flex items-start gap-3"><span className="text-teal-400">✓</span> Priority placement on Homeowner Radar</li>
                   <li className="flex items-start gap-3"><span className="text-teal-400">✓</span> 0% commission on the final invoice</li>
                   <li className="flex items-start gap-3"><span className="text-teal-400">✓</span> Custom branded business profile</li>
                 </ul>
+                <div className="w-full h-32 relative mb-6 rounded-xl overflow-hidden border border-slate-700">
+                  <Image src="/images/tradelink/06-pro-dashboard-live-radar.webp" alt="Pro Radar Dashboard" fill className="object-cover" />
+                </div>
                 <Link href="/register" className="block w-full text-center bg-teal-500 hover:bg-teal-400 text-slate-900 font-bold py-4 rounded-xl transition-colors shadow-[0_0_20px_rgba(20,184,166,0.3)]">
                   Upgrade to Pro
                 </Link>
@@ -183,18 +189,21 @@ export default function PricingPage() {
           <div className="w-full max-w-5xl animate-in fade-in zoom-in-95">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
               
-              <div className="glass-panel p-8 rounded-3xl relative overflow-hidden border-blue-500/30 shadow-[0_0_40px_rgba(59,130,246,0.1)]">
+              <div className="glass-panel p-8 rounded-3xl relative overflow-hidden border-blue-500/30 shadow-[0_0_40px_rgba(59,130,246,0.1)] flex flex-col">
                 <div className="absolute top-0 right-0 bg-blue-500 text-white text-xs font-black px-3 py-1 rounded-bl-xl uppercase tracking-widest">Local Agents</div>
                 <h3 className="text-2xl font-bold text-white mb-2">TradeLink Agency</h3>
                 <p className="text-slate-400 mb-6 min-h-[48px]">For local letting agents managing 10 to 500 properties.</p>
                 <div className="text-5xl font-black text-white mb-6">£99.99 <span className="text-lg text-slate-500 font-normal">/ month</span></div>
                 
-                <ul className="space-y-4 mb-8">
+                <ul className="space-y-4 mb-8 flex-1">
                   <li className="flex items-start gap-3"><span className="text-blue-400">✓</span> <strong>20 Free Priority Pings / mo</strong> (Value: £120)</li>
                   <li className="flex items-start gap-3"><span className="text-blue-400">✓</span> Consolidated Monthly Invoicing</li>
                   <li className="flex items-start gap-3"><span className="text-blue-400">✓</span> Multi-property dashboard & reporting</li>
                   <li className="flex items-start gap-3"><span className="text-blue-400">✓</span> Dedicated Agency Account Manager</li>
                 </ul>
+                <div className="w-full h-32 relative mb-6 rounded-xl overflow-hidden border border-slate-700">
+                  <Image src="/images/tradelink/07-property-manager-control-centre.webp" alt="Property Manager Control Centre" fill className="object-cover" />
+                </div>
                 <Link href="/register?type=agency" className="block w-full text-center bg-blue-500 hover:bg-blue-400 text-white font-bold py-4 rounded-xl transition-colors shadow-[0_0_20px_rgba(59,130,246,0.3)]">
                   Start Agency Trial
                 </Link>
