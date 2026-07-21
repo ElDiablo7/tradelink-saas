@@ -41,6 +41,14 @@ export default function Sidebar() {
           <span className="text-xl">💬</span> Messages
         </Link>
         <Link 
+          href="/pricing" 
+          className={`flex items-center gap-3 px-4 py-3 rounded-lg font-medium transition-colors ${
+            pathname === '/pricing' ? 'bg-teal-500/10 text-teal-400 border border-teal-500/20' : 'hover:bg-slate-800/50 text-slate-300 border border-transparent'
+          }`}
+        >
+          <span className="text-xl">💷</span> Pricing
+        </Link>
+        <Link 
           href="/settings" 
           className={`flex items-center gap-3 px-4 py-3 rounded-lg font-medium transition-colors ${
             pathname === '/settings' ? 'bg-teal-500/10 text-teal-400 border border-teal-500/20' : 'hover:bg-slate-800/50 text-slate-300 border border-transparent'

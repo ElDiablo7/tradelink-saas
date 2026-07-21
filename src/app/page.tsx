@@ -23,6 +23,9 @@ export default function ConsumerLandingPage() {
           <span className="font-bold text-xl tracking-tight">TradeLink</span>
         </div>
         <div className="flex items-center gap-6">
+          <Link href="/pricing" className="text-sm font-bold text-slate-300 hover:text-white transition-colors hidden sm:block">
+            Pricing
+          </Link>
           <Link href="/login" className="text-sm font-bold text-slate-300 hover:text-white transition-colors hidden sm:block">
             Sign In
           </Link>
@@ -145,8 +148,8 @@ export default function ConsumerLandingPage() {
             <h4 className="font-bold text-white mb-4">Homeowners</h4>
             <ul className="space-y-2 text-sm text-slate-400">
               <li><Link href="/post-job" className="hover:text-teal-400">Post a Job</Link></li>
-              <li><Link href="#" className="hover:text-teal-400">How it Works</Link></li>
-              <li><Link href="#" className="hover:text-teal-400">Pricing Guide</Link></li>
+              <li><Link href="/#how-it-works" className="hover:text-teal-400">How it Works</Link></li>
+              <li><Link href="/pricing" className="hover:text-teal-400">Pricing Guide</Link></li>
               <li><Link href="#" className="hover:text-teal-400">Trust & Safety</Link></li>
             </ul>
           </div>
@@ -155,7 +158,7 @@ export default function ConsumerLandingPage() {
             <ul className="space-y-2 text-sm text-slate-400">
               <li><Link href="/register" className="hover:text-teal-400">Join the Network</Link></li>
               <li><Link href="/login" className="hover:text-teal-400">Pro Dashboard</Link></li>
-              <li><Link href="#" className="hover:text-teal-400">Pro Success</Link></li>
+              <li><Link href="/pricing" className="hover:text-teal-400">Pricing Guide</Link></li>
             </ul>
           </div>
           <div>
