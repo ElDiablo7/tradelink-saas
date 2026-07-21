@@ -15,8 +15,30 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "TradeLink™ | Job Management for Trades",
-  description: "Match the right trade to the right job.",
+  title: "TradeLink™ | AI-Powered Trade Matching",
+  description: "Describe your home emergency, get an instant fair quote, and watch a vetted local professional arrive on a live map.",
+  openGraph: {
+    title: "TradeLink™ | AI-Powered Trade Matching",
+    description: "Describe your home emergency, get an instant fair quote, and watch a vetted local professional arrive on a live map.",
+    url: "https://tradelink.com",
+    siteName: "TradeLink",
+    images: [
+      {
+        url: "/images/tradelink/10-social-og-card.webp",
+        width: 1200,
+        height: 630,
+        alt: "TradeLink Social Preview Card",
+      },
+    ],
+    locale: "en_GB",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "TradeLink™ | AI-Powered Trade Matching",
+    description: "Describe your home emergency, get an instant fair quote, and watch a vetted local professional arrive on a live map.",
+    images: ["/images/tradelink/10-social-og-card.webp"],
+  },
 };
 
 export default function RootLayout({

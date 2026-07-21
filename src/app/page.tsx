@@ -1,9 +1,11 @@
 "use client";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import AIAssistant from "@/components/AIAssistant";
 
 export default function ConsumerLandingPage() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <div className="min-h-screen bg-[#0f172a] text-slate-100 flex flex-col font-sans selection:bg-teal-500/30">
       
@@ -16,25 +18,69 @@ export default function ConsumerLandingPage() {
       </div>
 
       {/* Navbar */}
-      <header className="h-20 border-b border-slate-800/50 bg-slate-900/80 backdrop-blur-md sticky top-0 z-40 px-6 flex items-center justify-between">
+      <header className="h-20 border-b border-slate-800/50 bg-slate-900/80 backdrop-blur-md sticky top-0 z-50 px-6 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-teal-500 to-teal-700 flex items-center justify-center font-bold text-lg shadow-[0_0_15px_rgba(20,184,166,0.2)]">
-            TL
-          </div>
-          <span className="font-bold text-xl tracking-tight">TradeLink</span>
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-teal-500 to-teal-700 flex items-center justify-center font-bold text-lg shadow-[0_0_15px_rgba(20,184,166,0.2)] group-hover:shadow-[0_0_20px_rgba(20,184,166,0.4)] transition-all">
+              TL
+            </div>
+            <span className="font-bold text-xl tracking-tight">TradeLink</span>
+          </Link>
         </div>
-        <div className="flex items-center gap-6">
-          <Link href="/pricing" className="text-sm font-bold text-slate-300 hover:text-white transition-colors hidden sm:block">
+        
+        {/* Desktop Nav */}
+        <div className="hidden md:flex items-center gap-6">
+          <Link href="/" className="text-sm font-bold text-slate-300 hover:text-white transition-colors">
+            Home
+          </Link>
+          <Link href="/pricing" className="text-sm font-bold text-slate-300 hover:text-white transition-colors">
             Pricing
           </Link>
-          <Link href="/login" className="text-sm font-bold text-slate-300 hover:text-white transition-colors hidden sm:block">
+          <Link href="/login" className="text-sm font-bold text-slate-300 hover:text-white transition-colors">
             Sign In
           </Link>
           <Link href="/post-job" className="bg-teal-500 text-slate-900 text-sm font-bold px-6 py-2.5 rounded-full hover:bg-teal-400 transition-all shadow-[0_0_20px_rgba(20,184,166,0.3)] hover:shadow-[0_0_30px_rgba(20,184,166,0.5)]">
             Post a Job
           </Link>
         </div>
+
+        {/* Mobile Hamburger Button */}
+        <div className="md:hidden flex items-center gap-4">
+          <Link href="/post-job" className="bg-teal-500 text-slate-900 text-sm font-bold px-4 py-2 rounded-full hover:bg-teal-400 transition-all">
+            Post Job
+          </Link>
+          <button 
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="text-slate-300 hover:text-white p-2"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {mobileMenuOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+        </div>
       </header>
+
+      {/* Mobile Menu Dropdown */}
+      {mobileMenuOpen && (
+        <div className="md:hidden fixed top-20 left-0 w-full bg-slate-900 border-b border-slate-800 z-40 px-6 py-4 flex flex-col gap-4 shadow-2xl animate-in slide-in-from-top-2">
+          <Link href="/" onClick={() => setMobileMenuOpen(false)} className="text-lg font-bold text-slate-300 hover:text-white py-2 border-b border-slate-800">
+            Home
+          </Link>
+          <Link href="/pricing" onClick={() => setMobileMenuOpen(false)} className="text-lg font-bold text-slate-300 hover:text-white py-2 border-b border-slate-800">
+            Pricing
+          </Link>
+          <Link href="/login" onClick={() => setMobileMenuOpen(false)} className="text-lg font-bold text-slate-300 hover:text-white py-2 border-b border-slate-800">
+            Sign In
+          </Link>
+          <Link href="/register" onClick={() => setMobileMenuOpen(false)} className="text-lg font-bold text-teal-400 hover:text-teal-300 py-2">
+            Join as a Pro
+          </Link>
+        </div>
+      )}
 
       <main className="flex-1 flex flex-col items-center">
         
